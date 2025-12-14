@@ -4,26 +4,34 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "cli": "bun src/cli.tsx",
     "dev": "bun --hot src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts",
-    "build": "bun run build.ts"
+    "build": "bun run build.ts",
+    "test": "bun test ./test/businessLogic.test.ts",
+    "test:creditChecker": "bun test/creditChecker.test.ts",
+    "debug": "bun debug.ts"
   },
   "dependencies": {
+    "@react-email/components": "^1.0.1",
     "bun-plugin-tailwind": "^0.1.2",
     "chalk": "^5.6.2",
+    "convex": "^1.31.0",
     "figlet": "^1.9.4",
     "ink": "^6.5.1",
-    "ink-big-text": "^2.0.0",
+    "ink-select-input": "^6.2.0",
     "ink-text-input": "^6.0.0",
-    "papaparse": "^5.5.3",
+    "node-html-parser": "^7.0.1",
+    "playwright": "^1.57.0",
     "react": "^19",
     "react-dom": "^19",
     "resend": "^6.6.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "@types/bun": "latest",
+    "@types/figlet": "^1.7.0",
     "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/bun": "latest"
+    "@types/react-dom": "^19"
   }
 }
